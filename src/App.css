@@ -600,3 +600,12 @@ body {
   .landing footer { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; }
 }
+.auth-success {
+  background: rgba(0,229,192,0.1);
+  border: 1px solid rgba(0,229,192,0.3);
+  color: var(--accent2);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

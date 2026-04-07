@@ -9,6 +9,8 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
+  const params = new URLSearchParams(window.location.search);
+const verified = params.get('verified');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ export default function Login() {
       <div className="auth-card">
         <h1 className="auth-logo">SONIQ</h1>
         <h2>Iniciar sesión</h2>
+        {verified && <div className="auth-success">¡Correo verificado! Ya puedes iniciar sesión.</div>}
         {error && <div className="auth-error">{error}</div>}
         <form onSubmit={handleSubmit}>
           <input
