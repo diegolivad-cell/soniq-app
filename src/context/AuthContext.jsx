@@ -6,7 +6,7 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem('token'));
 
-  const API = 'http://localhost:5136/api';
+  const API = 'https://soniq-api-do2026-c3g9hwetdvedaman.centralus-01.azurewebsites.net/api';
 
   useEffect(() => {
     if (token) {
